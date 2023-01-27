@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ingresos de datos</title>
+    <link rel="stylesheet" href="css/forms.css">
+    <script src="js/validar.js"></script>
+    <script src="js/modernizr.custom.lis.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ingresos de datos</h1>
+    </header>
+<section>
+    <article>
+        <form action="procesar.php" method="post">
+            <label for="">Cliente: </label>
+            <input type="text" id="client" name="client" />
+            <label for="">Producto: </label>
+            <input type="text" id="product" name="product" />
+            <label for="">Precio: </label>
+            <input type="text" id="price" name="price" />
+            <label for="">Cantidad:</label>
+            <input type="text" id="Cuantity" name="quantity" />
+            <span id="numbersOnly">Ingrese números enteros</span>
+            <input type="submit" name="submit" id="Enviar" value="Enviar" class="submit" />
+        </form>
+    </article>
+</section>
+</body>
+</html>

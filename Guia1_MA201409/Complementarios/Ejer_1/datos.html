@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de datos</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+<body background="./img/marmol.jpg">
+    <section class="form-registro">  
+       <h3>INGRESO DE DATOS PERSONALES</h3> 
+        <form action="show_data.php" method="post">
+            <input class="controls" type="text"  name="nombre" placeholder="Nombre Completo" required >
+                <br>
+            <input class="controls" type="text"  name="nacimiento" placeholder="Lugar de nacimiento-(Pais, si es extranjero)" required>
+                    
+            <br>
+            <input class="controls" type="text"  name="edad" placeholder="Edad" required>
+            <br>
+            <input class="controls" type="text"  name="carnet" placeholder="Carnet" required>
+            <br>    
+            <input class="boton_e"  type="submit" value="Enviar" name="registrar" required>
+            
+        </form>
+    </section>
+
+    
+</body>
+</html>
