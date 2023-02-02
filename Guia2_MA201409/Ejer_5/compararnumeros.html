@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar numeros</title>
+    <link rel="stylesheet" href="http://font.googleapis.com/css?family-Muli">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/formstyle.css">
+    <script src="js/validar.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Comparacion de numeros</h1>
+    </header>
+    <section>
+        <article id="formarea">
+            <form name="frmpalabras" method="post" action="compararnum.php">
+                <fieldset>
+                    <label for="number1">Primer numero: </label>
+                    <input type="text" name="numero1" id="number1" placeholder="Primer Numero" />
+                    <br>
+                    <span id="numbersOnly1">Ingrese números enteros</span>
+                    <label for="number2">Segundo numero: </label>
+                    <input type="text" name="numero2" id="number2" placeholder="Segundo Numero" />
+                    <br>
+                    <span id="numbersOnly2">Ingrese números enteros</span>
+                    <label for="number3">Tercer numero: </label>
+                    <input type="text" name="numero3" id="number3" placeholder="Tercer Numero" />
+                    <br>
+                    <span id="numbersOnly3">Ingrese números enteros</span>
+                    <input type="submit" name="conteo" id="count" value="Enviar">
+                    <span></span>
+                </fieldset>
+            </form>
+        </article>
+    </section>
+</body>
+</html>

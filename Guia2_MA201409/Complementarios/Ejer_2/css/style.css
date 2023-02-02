@@ -1,0 +1,106 @@
+body{
+    background-image: url("img/32214-lisos.jpg");
+}
+
+
+table{
+    width: 95%;
+    margin: 40px;
+    background: rgb(124, 154, 167);
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    border: 1px solid rgb(204, 200, 200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+background-color: rgb(204, 200, 200);    
+}
+
+
+input[type="text"]{
+    width: 51%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165, 161, 161);
+}
+
+input[type="submit"]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165, 161, 161);
+}
+
+button{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem; 
+    outline: none;
+}
+
+button:hover{
+    background:#4b99d8 ;
+}
+
+.tg  {
+    border-collapse:collapse;
+    border-color:#93a1a1;
+    border-spacing:0;}
+
+.tg td{
+    background-color:#fdf6e3;
+    border-color:#93a1a1;
+    border-style:solid;
+    border-width:0px;
+    color:#002b36;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;}
+    
+
+.tg th{
+    background-color:#657b83;
+    border-color:#93a1a1;
+    border-style:solid;
+    border-width:0px;
+    color:#fdf6e3;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;}
+    
+.tg .tg-1wig{
+    font-weight:bold;
+    text-align:left;
+    vertical-align:top}
+
+.tg .tg-baqh{
+    text-align:center;
+    vertical-align:top}
+
+.tg .tg-amwm{
+    font-weight:bold;
+    text-align:center;
+    vertical-align:top}
+
+.tg .tg-0lax{
+    text-align:left;
+    vertical-align:top}
