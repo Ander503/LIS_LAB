@@ -1,0 +1,386 @@
+.dropdown {
+    --max-scroll: 8;
+    --text: #3F4656;
+    --border: #2F3545;
+    --borderActive: #23C4F8;
+    --background: #ffffff;
+    --arrow: #6C7486;
+    --arrowActive: #E4ECFA;
+    --listText: #99A3BA;
+    --listBackground: #F5F9FF;
+    --listActive: #E4ECFA;
+    --listTextActive: #6C7486;
+    --listBorder: none;
+    --textFilled: #99A3BA;
+    width: 190px;
+    position: relative;
+    
+  }
+  .dropdown.light {
+    --text: #CDD9ED;
+    --border: #CDD9ED;
+    --borderActive: #23C4F8;
+    --background: #fff;
+    --arrow: #99A3BA;
+    --arrowActive: #6C7486;
+    --listText: #99A3BA;
+    --listBackground: #fff;
+    --listActive: #F5F9FF;
+    --listTextActive: #6C7486;
+    --listBorder: #E4ECFA;
+    --textFilled: #6C7486;
+  }
+  .dropdown select {
+    display: none;
+  }
+  .dropdown > span {
+    cursor: pointer;
+    padding: 9px 16px;
+    border-radius: 6px;
+    display: block;
+    position: relative;
+    color: var(--text);
+    border: 1px solid var(--border);
+    background: var(--background);
+    transition: all 0.3s ease;
+  }
+  .dropdown > span:before, .dropdown > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    top: 50%;
+    right: 15px;
+    background: var(--arrow);
+    transition: all 0.3s ease;
+  }
+  .dropdown > span:before {
+    margin-right: 4px;
+    transform: scale(0.96, 0.8) rotate(50deg);
+  }
+  .dropdown > span:after {
+    transform: scale(0.96, 0.8) rotate(-50deg);
+  }
+  .dropdown ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    max-height: calc(var(--max-scroll) * 42px);
+    top: 42px;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    background: var(--listBackground);
+    border-radius: 6px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform-origin: 0 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+    transform: scale(0.8) translate(0, 4px);
+    border: 1px solid var(--listBorder);
+  }
+  .dropdown ul li {
+    opacity: 0;
+    transform: translate(6px, 0);
+    transition: all 0.3s ease;
+  }
+  .dropdown ul li a {
+    cursor: pointer;
+    display: block;
+    padding: 10px 16px;
+    color: var(--listText);
+    text-decoration: none;
+    outline: none;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .dropdown ul li a:hover {
+    color: var(--listTextActive);
+  }
+  .dropdown ul li.active a {
+    color: var(--listTextActive);
+    background: var(--listActive);
+  }
+  .dropdown ul li.active a:before, .dropdown ul li.active a:after {
+    --scale: .6;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    opacity: 0;
+    background: var(--listText);
+    transition: all 0.2s ease;
+  }
+  .dropdown ul li.active a:before {
+    transform: rotate(45deg) scale(var(--scale));
+  }
+  .dropdown ul li.active a:after {
+    transform: rotate(-45deg) scale(var(--scale));
+  }
+  .dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
+    --scale: .9;
+    opacity: 1;
+  }
+  .dropdown ul li:first-child a {
+    border-radius: 6px 6px 0 0;
+  }
+  .dropdown ul li:last-child a {
+    border-radius: 0 0 6px 6px;
+  }
+  .dropdown.filled > span {
+    color: var(--textFilled);
+  }
+  .dropdown.open > span {
+    border-color: var(--borderActive);
+  }
+  .dropdown.open > span:before, .dropdown.open > span:after {
+    background: var(--arrowActive);
+  }
+  .dropdown.open > span:before {
+    transform: scale(0.96, 0.8) rotate(-50deg);
+  }
+  .dropdown.open > span:after {
+    transform: scale(0.96, 0.8) rotate(50deg);
+  }
+  .dropdown.open ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translate(0, 12px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  }
+  .dropdown.open ul li {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  .dropdown.open ul li:nth-child(1) {
+    transition-delay: 80ms;
+  }
+  .dropdown.open ul li:nth-child(2) {
+    transition-delay: 160ms;
+  }
+  .dropdown.open ul li:nth-child(3) {
+    transition-delay: 240ms;
+  }
+  .dropdown.open ul li:nth-child(4) {
+    transition-delay: 320ms;
+  }
+  .dropdown.open ul li:nth-child(5) {
+    transition-delay: 400ms;
+  }
+  .dropdown.open ul li:nth-child(6) {
+    transition-delay: 480ms;
+  }
+  .dropdown.open ul li:nth-child(7) {
+    transition-delay: 560ms;
+  }
+  .dropdown.open ul li:nth-child(8) {
+    transition-delay: 640ms;
+  }
+  .dropdown.open ul li:nth-child(9) {
+    transition-delay: 720ms;
+  }
+  .dropdown.open ul li:nth-child(10) {
+    transition-delay: 800ms;
+  }
+  
+  select {
+    --text: #3F4656;
+    --border: #2F3545;
+    --background: #151924;
+  }
+  select.dropdown {
+    padding: 9px 16px;
+    border-radius: 6px;
+    color: var(--text);
+    border: 1px solid var(--border);
+    background: var(--background);
+    line-height: 22px;
+    font-size: 16px;
+    font-family: inherit;
+    
+  }
+  
+  
+
+/*bag*/
+@font-face {
+  font-family: "icons";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/137355/icons.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/137355/icons.eot#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/137355/icons.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/137355/icons.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/137355/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-]:before {
+  font-family: "icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-bag:before {
+  content: "";
+}
+
+.icon-cart:before {
+  content: "";
+}
+
+
+
+
+.bagg_nav > a {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bagg_nav > a:before {
+  font-size: 25px;
+  color: #ccc;
+}
+.bagg_nav > a:not(:last-child) {
+  margin-right: 15px;
+}
+.bagg_nav .icon-bag:before {
+  color: #000;
+}
+
+.bagg_nav .icon-bag.no-empty:after {
+  content: "";
+  background: #ff0000;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  left: 40%;
+  transform: translateX(100%);
+  transform: translateY(-50%);
+  top: 0;
+  margin-bottom: 5px;
+}
+.bagg_nav .icon-bag.basket:before {
+  content: "";
+  font-size: 25px;
+  margin-top: 4px;
+}
+.bagg_nav .icon-bag.cart:before {
+  content: "";
+}
+
+/*Por cada contador*/
+.count_1,.count_2,
+.count_3,.count_4,
+.count_5,.count_6,
+.count_7,.count_8,
+.count_9,.count_10 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  font-size: 20px;
+}
+.count_1 .minus_1, 
+.count_1 .add_1,
+.count_2 .minus_2,
+.count_2 .add_2,
+.count_3 .minus_3, 
+.count_3 .add_3,
+.count_4 .minus_4,
+.count_4 .add_4,
+.count_5 .minus_5, 
+.count_5 .add_5,
+.count_6 .minus_6,
+.count_6 .add_6,
+.count_7 .minus_7, 
+.count_7 .add_7,
+.count_8 .minus_8,
+.count_8 .add_8,
+.count_9 .minus_9,
+.count_9 .add_9,
+.count_10 .minus_10, 
+.count_10 .add_10
+{
+  width: 40px;
+  height: 40px;
+  border: 2px solid #7BDED1;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7BDED1;
+  font-weight: bold;
+}
+
+.count_1 .minus_1:focus,
+.count_1 .add_1:focus, 
+.count_2 .minus_2:focus
+.count_2 .add_2:focus
+.count_3 .minus_3:focus,
+.count_3 .add_3:focus, 
+.count_4 .minus_4:focus,
+.count_4 .add_4:focus,
+.count_5 .minus_5:focus,
+.count_5 .add_5:focus, 
+.count_6 .minus_6:focus,
+.count_6 .add_6:focus,
+.count_7 .minus_7:focus,
+.count_7 .add_7:focus, 
+.count_8 .minus_8:focus,
+.count_8 .add_8:focus,
+.count_9 .minus_9:focus,
+.count_9 .add_9:focus, 
+.count_10 .minus_10:focus,
+.count_10 .add_10:focus 
+{
+  outline: none;
+}
+.count_1 .num_1,
+.count_2 .num_2,
+.count_3 .num_3,
+.count_4 .num_4,
+.count_5 .num_5,
+.count_6 .num_6,
+.count_7 .num_7,
+.count_8 .num_8,
+.count_9 .num_9,
+.count_10 .num_10
+{
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.scale:before {
+  -webkit-animation: scale 0.5s ease-out;
+          animation: scale 0.5s ease-out;
+}
+
+
+
+.scale-cart:before {
+  -webkit-animation: scale-cart 0.5s ease-out;
+          animation: scale-cart 0.5s ease-out;
+}
+

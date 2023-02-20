@@ -1,0 +1,299 @@
+
+/*Cards-main*/
+
+.card {
+    width: 236px;
+    height: 370px;
+    padding: .8em;
+    background: white;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   }
+   
+   .card-img {
+    height: 40%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+   }
+   
+   .card-info {
+    padding-top: 10%;
+   }
+   
+   svg {
+    width: 20px;
+    height: 20px;
+   }
+   
+   .card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+   }
+   
+   .text-body {
+    font-size: .9em;
+    padding-bottom: 10px;
+   }
+   
+   /*Button*/
+   .card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+   }
+   
+   /*Hover*/
+   .card-img:hover {
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+   
+   .card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+   }
+   
+
+/*Main body*/
+.altura-a-b{
+    padding: 100px 0;
+}
+
+.Parrafo{
+    text-align: center;
+    color:black;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.navbar{
+    color: #fff;
+}
+
+.logotipo{
+    width: 80px;
+    padding: 5px 0;
+    
+}
+
+.side_l{
+    margin-top: 30px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #EEE3CB;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .logotipo-footer{
+    width: 200px ;
+    margin-bottom: 20px;
+}
+
+footer p{
+    color: black;
+    font-size: 12px;
+}
+
+
+/*SHOP NOW*/
+.cta {
+    border: none;
+    background: none;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .navbar{
+    border-radius: 5px;
+  }
+
+  /*CAMBIAR COLOR LETRA NAV*/
+ /* .nav-link{
+    color: white;
+  }*/
+
+
+  .Parrafo{
+    text-align: center;
+    color:black;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+
+
+/*Slider*/
+
+.slider{
+    margin-top: 60px;
+    margin-right: 10px;
+    margin-left: 10px;    
+    text-align: center;
+}
+
+/*para pages*/
+.content {
+    width: 100%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;   
+    padding-bottom: 10px;
+    background-color: steelblue;
+    width: 97%;
+}
+
+.left {
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 57px;
+    float: left;
+    position: relative;
+    width: 45%;
+    height: auto;
+}
+
+.right {
+    padding-top: 10px;
+    margin-bottom: 30px;    
+    padding-left: 10px;
+    margin-left: 15px;
+    position: relative;
+    float: left;
+    width: 45%;
+    height: auto;
+}
+
+
+.img_show{
+    
+    height: 600px;
+    width: 680px;
+    text-align: center;
+}
+
+.card-button{
+  margin-left: 5px;
+}
+
+
+
+
+
+/*BOTON AMARILLO*/
+.btn {
+  padding: 1.1em 2em;
+  background: none;
+  border: 2px solid #fff;
+  font-size: 15px;
+  color: #131313;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #ecd448;
+  font-weight: bolder;
+  box-shadow: 0 2px 0 2px #000;
+ }
+ 
+ .btn:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #ff6700;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+ }
+ 
+ .btn:hover {
+  background-color: #4cc9f0;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #0d3b66;
+ }
+ 
+ .btn:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+ }
+ 
+ .btn:active {
+  transform: scale(0.9);
+ }
+
+ .bton_envio{
+  text-align: center;
+ }
